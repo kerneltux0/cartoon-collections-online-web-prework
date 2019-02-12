@@ -1,16 +1,29 @@
-def roll_call_dwarves# code an argument here
-  # Your code here
+def roll_call_dwarves(name)
+  name.each_with_index do |person,index|
+    puts("#{index+1} #{person}")
+  end
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+def summon_captain_planet(call)
+  call.collect{|x| x.capitalize + "!"}
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+def long_planeteer_calls(word)
+  word.any? do |word|
+    word.length > 4
+  end
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
-  cheese_types = ["cheddar", "gouda", "camembert"]
+def find_the_cheese(food)
+  food.find do |x|
+    if x.include?("cheddar")
+      return true
+    elsif x.include?("gouda")
+      return true
+    elsif x.include?("camembert")
+      return true
+    else
+      return nil
+    end
+  end
 end
