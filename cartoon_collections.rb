@@ -17,4 +17,5 @@ end
 def find_the_cheese(food)
   food.find do |x|
     x.include?("cheddar")
+  end
 end
